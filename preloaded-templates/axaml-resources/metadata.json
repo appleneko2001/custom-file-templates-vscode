@@ -1,0 +1,17 @@
+{
+    "title": "Avalonia XAML (ResourceDictionary)",
+    "adds": [
+    {
+        "refFile": "axaml.txt",
+        "newFileName": "{{name}}.axaml"
+    }],
+    "namespaceModifer": [
+    {
+        "replace": "\/",
+        "to": "."
+    },
+    {
+        "replace": "\\",
+        "to": "."
+    }]
+}

@@ -1,0 +1,20 @@
+using Avalonia.Controls;
+using Avalonia.Markup.Xaml;
+
+namespace {{namespace}};
+
+public partial class {{name}} : Window
+{
+    public {{name}}()
+    {
+        InitializeComponent();
+    }
+
+    /// <summary>
+    /// Preload visual source code. Internal use.
+    /// </summary>
+    private void InitializeComponent()
+    {
+        AvaloniaXamlLoader.Load(this);
+    }
+}

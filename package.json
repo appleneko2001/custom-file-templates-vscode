@@ -1,0 +1,58 @@
+{
+  "name": "custom-file-templates-appleneko2001",
+  "displayName": "Custom File Templates",
+  "description": "Create a file or some files from your own template!",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.82.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "custom-file-templates-appleneko2001.refreshList",
+        "title": "Refresh template list"
+      },{
+        "command": "custom-file-templates-appleneko2001.browseTemplates",
+        "title": "Browse templates folder"
+      },{
+        "command": "custom-file-templates-appleneko2001.newFileFromTemplate",
+        "title": "New file from template"
+      }
+    ],
+    "menus": {
+      "file/newFile": [{
+        "command": "custom-file-templates-appleneko2001.newFileFromTemplate",
+        "group": "custom-file-templates-new"
+      }],
+      "explorer/context": [{
+        "command": "custom-file-templates-appleneko2001.newFileFromTemplate",
+        "group": "custom-file-templates-new"
+      }]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.82.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@typescript-eslint/eslint-plugin": "^6.4.1",
+    "@typescript-eslint/parser": "^6.4.1",
+    "eslint": "^8.47.0",
+    "glob": "^10.3.3",
+    "mocha": "^10.2.0",
+    "typescript": "^5.1.6",
+    "@vscode/test-electron": "^2.3.4"
+  }
+}

@@ -1,0 +1,20 @@
+{
+    "title": "Avalonia XAML (Window)",
+    "adds": [
+    {
+        "refFile": "axaml.txt",
+        "newFileName": "{{name}}.axaml"
+    },{
+        "refFile": "axaml.cs.txt",
+        "newFileName": "{{name}}.axaml.cs"
+    }],
+    "namespaceModifer": [
+    {
+        "replace": "\/",
+        "to": "."
+    },
+    {
+        "replace": "\\",
+        "to": "."
+    }]
+}

@@ -63,7 +63,8 @@ export async function run (templatesManager: TemplatesManager, args: any) {
     const objectName = await vscode.window.showInputBox(inputOptions);
 
     if(!objectName) {
-        throw Error("Object name shouldn't be empty!");
+        return;
+        //throw Error("Object name shouldn't be empty!")
     }
 
     templatesManager.createFilesFromTemplateToDir(new CreateFilesOptions(targetFolder, objectName, selection.getModel(), namespace));

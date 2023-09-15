@@ -86,9 +86,21 @@ export default class TemplatesManager {
         }
 
         let newNamespace = source;
-        metadata.namespaceModifer?.forEach(rules=>{
-            newNamespace = newNamespace.replace(rules.replace!, rules.to!);
-        });
+        const mods = metadata.namespaceModifer;
+
+        if(!mods){
+            return newNamespace;
+        }
+
+        for (const rule of mods)
+        {
+            // not sure why string.replace does only once to replace some texts
+            // gonna use loop to repeat if the thing still exists.
+            while(newNamespace.indexOf(rule.replace!) > -1)
+            {
+                newNamespace = newNamespace.replace(rule.replace!, rule.to!);
+            }
+        }
 
         return newNamespace;
     }

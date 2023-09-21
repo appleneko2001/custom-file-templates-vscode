@@ -1,0 +1,17 @@
+{
+    "title": "C# Enums",
+    "adds": [
+    {
+        "refFile": "cs.txt",
+        "newFileName": "{{name}}.cs"
+    }],
+    "namespaceModifer": [
+    {
+        "replace": "\/",
+        "to": "."
+    },
+    {
+        "replace": "\\",
+        "to": "."
+    }]
+}

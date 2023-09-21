@@ -1,0 +1,10 @@
+using System;
+using System.Linq;
+using System.Text;
+
+namespace {{namespace}}
+{
+    public interface {{name}}
+    {
+    }
+}

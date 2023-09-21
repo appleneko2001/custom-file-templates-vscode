@@ -55,7 +55,7 @@ export async function run (templatesManager: TemplatesManager, args: any) {
     }
 
     let inputOptions = <vscode.InputBoxOptions> {
-        title: `New object at: ${targetFolder}`,
+        title: `New ${selection.label} at: ${targetFolder}`,
         prompt: "Please enter the object name",
         value: "MyObject"
     };
